@@ -1,8 +1,8 @@
 // script.js - Gestión de formulario de docentes con Supabase
 
 // Configuración de Supabase
-const supabaseUrl = 'https://wofpjzrgvckmaontysud.supabase.co'; // Reemplaza con tu URL de Supabase
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndvZnBqenJndmNrbWFvbnR5c3VkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0NTY3OTEsImV4cCI6MjA5MjAzMjc5MX0.jY114L2yw7qlte4TNlTI8e2vP-LzWHCnC3aYO10_ICw'; // Reemplaza con tu clave anónima
+const supabaseUrl = 'https://rxuhgvtbrrafnlmywqsw.supabase.co'; // Reemplaza con tu URL de Supabase
+const supabaseKey = 'sb_publishable_vDPpEmREFAOsPdmDATv3rQ_VuPoUmEY'; // Reemplaza con tu clave anónima
 const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 // Función para agregar docente
