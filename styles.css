@@ -1,232 +1,177 @@
-/* =========================================
-   Reset Básico y Variables
-   ========================================= */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f7f6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-/* =========================================
-   Encabezado (Header)
-   ========================================= */
+/* Encabezado */
 header {
-    background-color: #ffffff;
+    background-color: #228B22;
+    color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
 }
 
 header img {
-    margin-bottom: 10px;
-    border-radius: 8px; /* Suaviza los bordes del logo si es cuadrado */
+    display: block;
+    margin: 0 auto 10px;
 }
 
 header h1 {
-    color: #006b3f; /* Verde institucional */
-    font-size: 2.2rem;
-    margin-bottom: 5px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 header p {
-    color: #666;
-    font-size: 1.1rem;
+    font-size: 1.2em;
 }
 
-/* =========================================
-   Navegación (Nav)
-   ========================================= */
+/* Navegación */
 nav {
-    background-color: #006b3f;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #333;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Evita que se rompa en pantallas pequeñas */
-    padding: 1rem 0;
+    text-align: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* Dorado para resaltar al pasar el cursor */
+    background-color: #228B22;
+    border-radius: 5px;
 }
 
-/* =========================================
-   Contenido Principal (Main y Sections)
-   ========================================= */
+/* Contenido principal */
 main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 section {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
 }
 
-h2 {
-    color: #006b3f;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #ffd700;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-h3 {
-    color: #444;
-    margin-bottom: 1rem;
+section h2 {
+    color: #228B22;
+    border-bottom: 2px solid #228B22;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 section p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
 }
 
-/* Enlaces externos */
-section a {
-    display: inline-block;
-    color: #0056b3;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    transition: color 0.3s;
-}
-
-section a:hover {
-    color: #003d82;
-    text-decoration: underline;
-}
-
-/* =========================================
-   Imágenes (Flexbox ajustado)
-   ========================================= */
-#inicio div {
+/* Contenedor de imágenes */
+.imagenes-container {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
-    flex-wrap: wrap; /* Las imágenes se apilan en móviles */
-    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
-#inicio img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 100%; /* Las hace responsivas */
+.imagenes-container img {
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
-/* =========================================
-   Formulario de Docentes
-   ========================================= */
+/* Formulario */
 form {
     background-color: #f9f9f9;
-    padding: 2rem;
+    padding: 20px;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    margin-top: 20px;
 }
 
-label {
+form label {
     display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-input[type="text"]:focus {
-    border-color: #006b3f;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 107, 63, 0.2);
-}
-
-button {
-    background-color: #006b3f;
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    font-size: 1rem;
+    margin-bottom: 5px;
     font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 10px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #004d2d;
+form button:hover {
+    background-color: #FFC107;
 }
 
-button:active {
-    transform: scale(0.98);
-}
-
-/* Estilo alternativo para los botones de Eliminar o secundarios si lo deseas */
-button:nth-of-type(3) {
-    background-color: #d9534f;
-}
-button:nth-of-type(3):hover {
-    background-color: #c9302c;
-}
-
-/* =========================================
-   Video de YouTube
-   ========================================= */
-#video {
-    text-align: center;
-}
-
+/* Video */
 iframe {
     max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: auto;
 }
 
-/* =========================================
-   Pie de Página (Footer)
-   ========================================= */
+/* Pie de página */
 footer {
-    background-color: #222;
-    color: #ccc;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    div[style*="display: flex"] {
+        flex-direction: column;
+        align-items: center;
+    }
 }
